@@ -96,7 +96,7 @@
     }
 
     /* Responsive for phones */
-    @media (max-width: 768px) {
+   /* @media (max-width: 768px) {
       .variant-title {
         margin-left: 0;
         text-align: center;
@@ -128,17 +128,63 @@
        .images img:nth-child(1),
   .images img:nth-child(2),
   .images img:nth-child(3) {
-   margin-right: 50px /* Stumia paveikslėlius į kairę */
-    max-width: 200px;
+   margin-right: 50px  */ /* Stumia paveikslėlius į kairę */
+   /* max-width: 200px;
   }
  .images img:nth-child(3) {
     margin-left: -70px; /* pastumia į kairę 20px */
-  }
+  }*/
   /* Paskutinis paveikslėlis */
-  .images img:nth-child(4) {
+  /*.images img:nth-child(4) {
     margin-left: 0;  /* Paskutinis paveikslėlis lieka viduryje */
   }
-    }
+    } */
+    @media (max-width: 768px) {
+  .variant-title {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left, .right {
+    text-align: center;
+  }
+
+  .images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .images img {
+    max-width: 90%;      /* Automatiškai prisitaiko prie ekrano */
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+  }
+
+  /* Papildomas pritaikymas trims pirmiems paveikslėliams (jei nori kiek sumažinti) */
+  .images img:nth-child(1),
+  .images img:nth-child(2),
+  .images img:nth-child(3) {
+    max-width: 80%;
+  }
+
+  /* Tik trečias paveikslėlis – šiek tiek pastumtas */
+  .images img:nth-child(3) {
+    margin-left: -20px;
+  }
+
+  /* Paskutinis (4) paveikslėlis lieka centre */
+  .images img:nth-child(4) {
+    margin-left: 0;
+  }
+}
+
   </style>
 </head>
 <body>
